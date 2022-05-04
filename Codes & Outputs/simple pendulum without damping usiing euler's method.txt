@@ -1,0 +1,30 @@
+import numpy as np
+from matplotlib import pyplot as plt
+l=1
+g=1
+t0=0
+x0=1
+y0=1
+tf=5
+n=50
+deltat=(tf-t0)/(n-1)
+t=np.linspace(t0,tf,n)
+y=np.zeros([n])
+y[0]=y0
+x=np.zeros([n])
+x[0]=x0
+for i in range(1,n):
+    y[i]=y[i-1]+deltat*x[i]
+    #y=theta
+    for i in range(1,n):
+        x[i]=x[i-1]-(g/l)*y[i-2]
+    #x=omega
+for i in range(n):
+    for i in range(n):
+        print(y[i],x[i])
+        plt.title("SIMPLE PENDULUM WITHOUT DAMPING using euler method")
+        plt.xlabel("theta")
+        plt.ylabel("omega")
+        plt.plot(y,x)
+        plt.show()
+    

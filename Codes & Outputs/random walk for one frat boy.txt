@@ -1,0 +1,16 @@
+from random import choice
+from pylab import*
+N=100
+x=zeros([N])
+t=range(N)
+for i in range(1,N):
+      if choice(['F','B'])=='B':
+                x[i]=x[i-1]-1
+      else:
+            x[i]=x[i-1]+1
+            RMS=array([sqrt(i*i) for i in x ])
+#print(x,t)
+xlabel('time')
+ylabel('Displacement')
+plot(t,x)
+show()
