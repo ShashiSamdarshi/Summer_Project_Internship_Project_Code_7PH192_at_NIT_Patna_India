@@ -1,1 +1,1 @@
-# Summer_Project_Internship_Project_Code_7PH192_at_NIT_Patna_India
+Summer Project (Internship), Project Code: 7PH192 at NIT Patna,India
